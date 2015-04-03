@@ -9,12 +9,17 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- *
+ *Clase para obtener palabras de un texto
  * @author rafael
  */
 public class Filtroparatexto {
 
     private String filtro1;
+    /**
+ *Metodo para obtener palabras de un texto
+ * @author rafael
+ *  @param texto 
+ */
 
     public void Filtroparatexto(String texto) {
 

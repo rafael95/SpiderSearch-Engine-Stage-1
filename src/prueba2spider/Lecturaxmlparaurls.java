@@ -13,12 +13,17 @@ import org.jdom2.JDOMException;
 import org.jdom2.input.SAXBuilder;
 
 /**
- *
+ *Clase para leer la informacion de los urls de un archivo xml
  * @author rafael
  */
 public class Lecturaxmlparaurls extends Metodos {
 
     String xmlFile;
+    
+ /**
+ *Metodo para leer la informacion de los urls de un archivo xml
+ * @author rafael
+ */
 
     public Lecturaxmlparaurls(String x, Nodo enlace) {
         super(x=null, enlace=null);

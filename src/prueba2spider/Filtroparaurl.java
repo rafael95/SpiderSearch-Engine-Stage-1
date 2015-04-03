@@ -9,12 +9,20 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- *
+ *Clase que obtiene las urls de la pagina web
  * @author rafael
  */
 public class Filtroparaurl extends Metodos{
    
     private String texto, texto1 = "", texto2 = "", texto3 = "", texto4 = "", texto5 = "",red1="";
+    
+    /**
+ *Metodo que obtiene las urls de la pagina web
+ * @author rafael
+ * @param enlace
+ * @param x
+ */
+
     public Filtroparaurl(String x,Nodo enlace){
         super(x,enlace);
        

@@ -7,15 +7,12 @@ package prueba2spider;
 import java.io.IOException;
 import jdk.nashorn.internal.objects.Global;
 /**
- *
- * @author rafael
+ * Clase de ejecucion del programa y instanciacion de los objetos
+ * @author  rafael, anderson
  */
 public class Prueba2Spider {
 
-    /**
-     * @param args the command line arguments
-     * @throws java.io.IOException
-     */
+    
     public static void main(String[] args) throws IOException{
         // TODO code application logic here
         Metodos lo=new Metodos(null,null);

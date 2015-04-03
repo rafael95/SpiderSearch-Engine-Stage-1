@@ -1,5 +1,8 @@
 package prueba2spider;
-
+/**
+ *Clase crea nodo
+ * @author rafael
+ */
 public class Nodo {
     Nodo sig;
     String dato;

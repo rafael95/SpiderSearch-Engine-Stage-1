@@ -3,7 +3,10 @@
  * and open the template in the editor.
  */
 package prueba2spider;
-
+/**
+ *Clase Para modificar la cola 
+ * @author rafael
+ */
 
 public class Metodos extends Nodo{
     
@@ -16,7 +19,10 @@ public class Metodos extends Nodo{
         dato="";
     }
 
-    
+    /**
+ *Clase Para modificar la cola 
+ * @author rafael
+ */
     void InsertarNodo(String x){
         Nodo nuevo;
         if(frente==null){
@@ -29,14 +35,25 @@ public class Metodos extends Nodo{
             
         }
     }
-    
+    /**
+ *Metodo que elimina el primer valor de la cola
+ * @author rafael
+ */
     void SacarNodo(){
         frente=frente.sig;
     }
+    /**
+ *Metodo que muestra el primer valor de la cola
+ * @author rafael
+ */
      void  MostrarNodo(){
           Nodo aux=frente;
          System.out.println(aux.dato);
     }
+     /**
+ *Metodo que imprime la cola
+ * @author rafael
+ */
     
     void ImprimirNodo(){
         Nodo aux=frente;
