@@ -32,6 +32,8 @@ public class Filtroparatexto {
         Pattern p = Pattern.compile(" [a-zA-ZóíñÑ]{4,30}+");
         Matcher m = p.matcher(filtro1);
         while (m.find()) {
+            
+            
           //  System.out.println(m.group());
         }
 
