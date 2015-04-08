@@ -65,7 +65,8 @@ public class Filtroparaurl extends Metodos{
         Pattern p = Pattern.compile(" [a-zA-ZóíñÑ0-9%$><@!*#()||{}|\\&.,=?/:;'_-]{17,}+");
         Matcher m = p.matcher(texto5);
         while (m.find()) {
-            lo.InsertarNodo(m.group(),0);
+          
+            lo.InsertarNodo(m.group(),1);
             
         }
         

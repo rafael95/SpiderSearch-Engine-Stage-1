@@ -15,19 +15,21 @@ public class Prueba2Spider {
     
     public static void main(String[] args) throws IOException{
         // TODO code application logic here
-        Metodos lo=new Metodos(null,null,0);
-        ListaCD listaurl=new ListaCD(null,null,null);
+        
+         Metodos lo=new Metodos(null,null,0);
+         Lecturaxmlparaurls hola = new Lecturaxmlparaurls(null,null,0);
+         hola.Lecturaxmlparaurls("archivos_a_procesar.xml",lo,null,null);
+         ListaCD listaurl=new ListaCD(null,null,null);
+         Lecturaweb Leer1 = new Lecturaweb();
+       
+        
       
         
-           String red = "google.com";
-           Lecturaxmlparaurls hola = new Lecturaxmlparaurls(null,null,0);
-           Lecturaweb Leer1 = new Lecturaweb();
-          
-          hola.Lecturaxmlparaurls("archivos_a_procesar.xml",lo,null,null);
-          Leer1.Lecturaweb(red,lo,listaurl);
-           lo.ImprimirNodo();
-           lo.MostrarNodo();
-          listaurl.mostrar();
+         String red =  lo.MostrarNodo();
+         lo.SacarNodo();
+         Leer1.Lecturaweb(red,lo,listaurl);
+         lo.ImprimirNodo();
+         listaurl.mostrar();
            
           
            

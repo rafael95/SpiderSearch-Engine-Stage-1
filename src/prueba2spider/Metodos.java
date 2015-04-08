@@ -48,9 +48,15 @@ public class Metodos extends Nodo_para_cola{
  *Metodo que muestra el primer valor de la cola
  * @author rafael
  */
-     void  MostrarNodo(){
+     String  MostrarNodo(){
           Nodo_para_cola aux=frente;
-         System.out.println(aux.dato+aux.posicion);
+         return (aux.dato);
+    }
+     
+     
+      int  Mostrarasociado(){
+          Nodo_para_cola aux=frente;
+         return (aux.posicion);
     }
      /**
  *Metodo que imprime la cola
