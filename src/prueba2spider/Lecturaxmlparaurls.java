@@ -31,7 +31,7 @@ public class Lecturaxmlparaurls extends Metodos {
     
     public void Lecturaxmlparaurls(String xmlFile, Metodos lo,String x,Nodo_para_cola enlace) {
       
-        Metodos lo1 =lo;
+     
         SAXBuilder builder = new SAXBuilder();
 
         try {
@@ -44,7 +44,7 @@ public class Lecturaxmlparaurls extends Metodos {
 
                 Element node = (Element) list.get(i);
               
-                lo1.InsertarNodo(node.getValue(),0);
+                lo.InsertarNodo(node.getValue(),0);
 
             }
           

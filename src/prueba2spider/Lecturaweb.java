@@ -27,7 +27,7 @@ public class Lecturaweb {
  * @author rafael
  */
     
-    public void Lecturaweb(String urlweb,Metodos lo1) {
+    public void Lecturaweb(String urlweb,Metodos lo,ListaCD listaurl) {
         
         try {
          // Se abre la conexión
@@ -58,7 +58,7 @@ public class Lecturaweb {
       }
         
          Filtroparaurl text1= new Filtroparaurl(null,null,0);
-         text1.Filtroparaurl(texto,urlweb,lo1);
+         text1.Filtroparaurl(texto,urlweb,lo,listaurl);
            Filtroparatexto text2= new Filtroparatexto();
          text2.Filtroparatexto(texto);
      

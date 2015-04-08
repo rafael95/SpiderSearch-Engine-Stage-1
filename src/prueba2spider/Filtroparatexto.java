@@ -20,7 +20,7 @@ public class Filtroparatexto {
  * @author rafael
  *  @param texto 
  */
-
+    
     public void Filtroparatexto(String texto) {
 
         Pattern pattern = Pattern.compile(">(.*?)<");
