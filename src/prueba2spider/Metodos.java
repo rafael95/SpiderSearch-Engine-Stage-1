@@ -8,12 +8,13 @@ package prueba2spider;
  * @author rafael
  */
 
-public class Metodos extends Nodo{
+public class Metodos extends Nodo_para_cola{
+    Nodo_para_cola sig, frente,ultimo;
     
-    Nodo sig,frente,ultimo;
+  
     private  String dato;
     private  int pos;
-    Metodos(String x,Nodo enlace,int posicion1){
+    Metodos(String x,Nodo_para_cola enlace,int posicion1){
         super( x,enlace,posicion1);
         frente=ultimo=null;
         dato="";
@@ -25,12 +26,12 @@ public class Metodos extends Nodo{
  * @author rafael
  */
     void InsertarNodo(String x,int posicion1){
-        Nodo nuevo;
+        Nodo_para_cola nuevo;
         if(frente==null){
-            nuevo=new Nodo(x,null,posicion1);
+            nuevo=new Nodo_para_cola(x,null,posicion1);
             frente=ultimo=nuevo;
         }else{
-            nuevo=new Nodo(x,null,posicion1);
+            nuevo=new Nodo_para_cola(x,null,posicion1);
             ultimo.sig=nuevo;
             ultimo=nuevo;
             
@@ -48,16 +49,18 @@ public class Metodos extends Nodo{
  * @author rafael
  */
      void  MostrarNodo(){
-          Nodo aux=frente;
+          Nodo_para_cola aux=frente;
          System.out.println(aux.dato+aux.posicion);
     }
      /**
+ *Metodo que imprime la cola
+ * @author rafael     /**
  *Metodo que imprime la cola
  * @author rafael
  */
     
     void ImprimirNodo(){
-        Nodo aux=frente;
+        Nodo_para_cola aux=frente;
         String salir="";
         while(aux!=null){
             salir+=aux.dato+aux.posicion+",";

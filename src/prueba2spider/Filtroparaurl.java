@@ -23,7 +23,7 @@ public class Filtroparaurl extends Metodos{
  * @param x
  */
 
-    public Filtroparaurl(String x,Nodo enlace,int posicion1){
+    public Filtroparaurl(String x,Nodo_para_cola enlace,int posicion1){
         super(x,enlace,posicion1);
        
     }

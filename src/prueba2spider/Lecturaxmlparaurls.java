@@ -25,11 +25,11 @@ public class Lecturaxmlparaurls extends Metodos {
  * @author rafael
  */
 
-    public Lecturaxmlparaurls(String x, Nodo enlace,int posicion1) {
+    public Lecturaxmlparaurls(String x, Nodo_para_cola enlace,int posicion1) {
         super(x=null, enlace=null,posicion1=0);
     }
     
-    public void Lecturaxmlparaurls(String xmlFile, Metodos lo,String x,Nodo enlace) {
+    public void Lecturaxmlparaurls(String xmlFile, Metodos lo,String x,Nodo_para_cola enlace) {
       
         Metodos lo1 =lo;
         SAXBuilder builder = new SAXBuilder();
