@@ -6,10 +6,11 @@ package prueba2spider;
 public class Nodo {
     Nodo sig;
     String dato;
-   
+   int posicion;
     
-    Nodo(String x,Nodo enlace){
+    Nodo(String x,Nodo enlace,int posicion1){
         sig=enlace;
         dato=x;
+        posicion=posicion1;
     }
 }

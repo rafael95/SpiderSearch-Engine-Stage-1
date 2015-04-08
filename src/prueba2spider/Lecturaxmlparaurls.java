@@ -25,8 +25,8 @@ public class Lecturaxmlparaurls extends Metodos {
  * @author rafael
  */
 
-    public Lecturaxmlparaurls(String x, Nodo enlace) {
-        super(x=null, enlace=null);
+    public Lecturaxmlparaurls(String x, Nodo enlace,int posicion1) {
+        super(x=null, enlace=null,posicion1=0);
     }
     
     public void Lecturaxmlparaurls(String xmlFile, Metodos lo,String x,Nodo enlace) {
@@ -44,7 +44,7 @@ public class Lecturaxmlparaurls extends Metodos {
 
                 Element node = (Element) list.get(i);
               
-                lo1.InsertarNodo(node.getValue());
+                lo1.InsertarNodo(node.getValue(),0);
 
             }
           

@@ -23,8 +23,8 @@ public class Filtroparaurl extends Metodos{
  * @param x
  */
 
-    public Filtroparaurl(String x,Nodo enlace){
-        super(x,enlace);
+    public Filtroparaurl(String x,Nodo enlace,int posicion1){
+        super(x,enlace,posicion1);
        
     }
    
@@ -65,7 +65,7 @@ public class Filtroparaurl extends Metodos{
         Pattern p = Pattern.compile(" [a-zA-ZóíñÑ0-9%$><@!*#()||{}|\\&.,=?/:;'_-]{17,}+");
         Matcher m = p.matcher(texto5);
         while (m.find()) {
-            lo1.InsertarNodo(m.group());
+            lo1.InsertarNodo(m.group(),0);
             
         }
        

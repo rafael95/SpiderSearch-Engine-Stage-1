@@ -23,10 +23,7 @@ public class TrabajarHilos implements Runnable {
         t.start();
        
     }
-    /**
- *Metodo que corre el hilo 
- * @author rafael
- */
+  
     public TrabajarHilos (String nombre){
         this.nombre=nombre;
         t= new Thread(this,"hilo1");
@@ -34,7 +31,10 @@ public class TrabajarHilos implements Runnable {
        
     }
     
-    
+   /**
+ *Metodo que corre el hilo 
+ * @author rafael
+ */
     public void run() {
         try{
             for(int i=1;i<=5;i++){

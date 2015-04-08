@@ -12,24 +12,25 @@ public class Metodos extends Nodo{
     
     Nodo sig,frente,ultimo;
     private  String dato;
-    
-    Metodos(String x,Nodo enlace){
-        super( x,enlace);
+    private  int pos;
+    Metodos(String x,Nodo enlace,int posicion1){
+        super( x,enlace,posicion1);
         frente=ultimo=null;
         dato="";
+        pos=0;
     }
 
     /**
  *Clase Para modificar la cola 
  * @author rafael
  */
-    void InsertarNodo(String x){
+    void InsertarNodo(String x,int posicion1){
         Nodo nuevo;
         if(frente==null){
-            nuevo=new Nodo(x,null);
+            nuevo=new Nodo(x,null,posicion1);
             frente=ultimo=nuevo;
         }else{
-            nuevo=new Nodo(x,null);
+            nuevo=new Nodo(x,null,posicion1);
             ultimo.sig=nuevo;
             ultimo=nuevo;
             
@@ -48,7 +49,7 @@ public class Metodos extends Nodo{
  */
      void  MostrarNodo(){
           Nodo aux=frente;
-         System.out.println(aux.dato);
+         System.out.println(aux.dato+aux.posicion);
     }
      /**
  *Metodo que imprime la cola
@@ -59,7 +60,7 @@ public class Metodos extends Nodo{
         Nodo aux=frente;
         String salir="";
         while(aux!=null){
-            salir+=aux.dato+",";
+            salir+=aux.dato+aux.posicion+",";
             aux=aux.sig;
         }
         System.out.println("Nodos :"+salir);
