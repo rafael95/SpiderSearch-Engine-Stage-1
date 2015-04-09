@@ -31,7 +31,7 @@ public class Lecturaxmlparaurls extends Metodos {
     
     public void Lecturaxmlparaurls(String xmlFile, Metodos lo,String x,Nodo_para_cola enlace) {
       
-     
+       
         SAXBuilder builder = new SAXBuilder();
 
         try {

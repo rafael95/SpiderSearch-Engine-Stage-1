@@ -12,7 +12,7 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
-import static org.apache.xalan.xsltc.compiler.util.Type.String;
+
 
 /**
  *Clase que realiza la conexion para obtener la informacion de la pagina web
@@ -32,8 +32,11 @@ public class Lecturaweb {
         try {
          // Se abre la conexión
          URL url = new URL("http://"+ urlweb);
+        
          URLConnection conexion = url.openConnection();
+         
          conexion.connect();
+         
          
          // Lectura
          InputStream is = conexion.getInputStream();
@@ -44,7 +47,7 @@ public class Lecturaweb {
          while ((leido = br.read(buffer)) > 0) {
             texto=texto +(new String(buffer, 0, leido));
  
-            
+          
             }
          
          

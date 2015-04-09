@@ -49,7 +49,11 @@ public class Metodos extends Nodo_para_cola{
  * @author rafael
  */
      String  MostrarNodo(){
+           if(frente==null){
+            return null;
+           }
           Nodo_para_cola aux=frente;
+          
          return (aux.dato);
     }
      

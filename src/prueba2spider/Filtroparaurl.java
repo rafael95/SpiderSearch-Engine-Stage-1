@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
  */
 public class Filtroparaurl extends Metodos{
    
-    private String texto, texto1 = "", texto2 = "", texto3 = "", texto4 = "", texto5 = "",red1="";
+    private String texto, texto1 = "", texto2 = "", texto3 = "", texto7 = "", texto4 = "", texto5 = "", texto6 = "",red1="";
     
     /**
  *Metodo que obtiene las urls de la pagina web
@@ -29,7 +29,7 @@ public class Filtroparaurl extends Metodos{
     }
    
     public void Filtroparaurl (String texto,String red,Metodos lo,ListaCD listaurl) {
-      
+        Metodos lo1=lo;
         Pattern patterntex = Pattern.compile("/[/a-zA-ZóíñÑ0-9%$><@!*#()||{}|\\&.,=?/:;'_-]+");
         Matcher matchertex = patterntex.matcher(red+"/");
       
@@ -54,24 +54,33 @@ public class Filtroparaurl extends Metodos{
         Pattern pattern3 = Pattern.compile("\"");
         Matcher matcher3 = pattern3.matcher(texto3);
         texto4 = texto4 + matcher3.replaceAll(" ");
-
+        
+        Pattern pattern5 = Pattern.compile(">(.*?)<");
+        Matcher matcher5 = pattern5.matcher(texto4);
+        texto5 = texto5 + matcher5.replaceAll(" "); 
+        
+        Pattern pattern6 = Pattern.compile("//(.*?) ");
+        Matcher matcher6= pattern6.matcher(texto5);
+        texto7 = texto7 + matcher6.replaceAll(" ");
+        
+        
         Pattern pattern4 = Pattern.compile(" (.*?) ");
-        Matcher matcher4 = pattern4.matcher(texto4);
+        Matcher matcher4 = pattern4.matcher(texto7);
         while (matcher4.find()) {
-            texto5 = texto5 + matcher4.group();
-        }
-        
-        
-        Pattern p = Pattern.compile(" [a-zA-ZóíñÑ0-9%$><@!*#()||{}|\\&.,=?/:;'_-]{17,}+");
-        Matcher m = p.matcher(texto5);
-        while (m.find()) {
-          
-            lo.InsertarNodo(m.group(),1);
+            texto6 = texto6 + matcher4.group();
             
         }
         
         
+        Pattern p = Pattern.compile("[a-zA-ZóíñÑ0-9%$><@!*#()||{}|\\&.,=?/:;'_-]{35,}+");
+        Matcher m = p.matcher(texto6);
+        while (m.find()) {
+       
+          lo1.InsertarNodo(m.group(),0);
+            
+        }
         
+       
         listaurl.insertHead(red);
        
     }
