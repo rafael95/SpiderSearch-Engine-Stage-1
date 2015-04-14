@@ -20,24 +20,25 @@ public class Prueba2Spider {
          Lecturaxmlparaurls hola = new Lecturaxmlparaurls(null,null,0);
          hola.Lecturaxmlparaurls("archivos_a_procesar.xml",lo,null,null);
          Lecturaxml Leer = new Lecturaxml();
-       
          ListaCD listaurl=new ListaCD(null,null,null);
          Lecturaweb Leer1 = new Lecturaweb();
-        int i=0;
+         Leer.Lecturaxml("configu.xml",lo, listaurl,Leer1);
+        int i = 0;
+       
        
         
      
        while (lo.MostrarNodo()!=null& i!=15){
          
-         String red =  lo.MostrarNodo();
-         lo.SacarNodo();
-         Leer1.Lecturaweb(red,lo,listaurl);
-         i=i+1;
+        String red =  lo.MostrarNodo();
+        lo.SacarNodo();
+        Leer1.Lecturaweb(red,lo,listaurl);
+        i=i+1;
             
         }
          lo.MostrarNodo();
          lo.ImprimirNodo();
-         listaurl.mostrar();
+        listaurl.mostrar();
            
         
            

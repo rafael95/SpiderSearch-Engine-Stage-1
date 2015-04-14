@@ -9,7 +9,7 @@ package prueba2spider;
  *Clase que se utiliza para crear hilo
  * @author rafael
  */
-public class TrabajarHilos implements Runnable {
+public abstract class TrabajarHilos implements Runnable {
 
     Thread t;
     String nombre;
@@ -35,19 +35,6 @@ public class TrabajarHilos implements Runnable {
  *Metodo que corre el hilo 
  * @author rafael
  */
-    public void run() {
-        try{
-            for(int i=1;i<=5;i++){
-                
-                System.out.println(nombre+" "+i);
-                Thread.sleep(500);
-                
-            }
-            
-            
-        }catch(InterruptedException e){};
-
-    
-    }
+   
     
 }

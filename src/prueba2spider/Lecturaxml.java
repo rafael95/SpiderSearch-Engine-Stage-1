@@ -7,6 +7,8 @@ package prueba2spider;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
@@ -22,7 +24,7 @@ public class Lecturaxml {
     int maxthreads=0,recursivity=0,reindex=0,contador=1;
     
 
-    public void Lecturaxml(String xmlFile) {
+    public void Lecturaxml(String xmlFile,Metodos lo,ListaCD listaurl, Lecturaweb Leer1) {
 
         SAXBuilder builder = new SAXBuilder();
 
@@ -44,12 +46,34 @@ public class Lecturaxml {
            maxthreads= Integer.parseInt(configuracion[0]);
            recursivity=Integer.parseInt(configuracion[1]);
            reindex=Integer.parseInt(configuracion[2]);
-           while(contador<=maxthreads){
-            TrabajarHilos numero=new TrabajarHilos("N"+contador);
-            contador=contador+1;
+          // while(contador<=maxthreads){
+           // TrabajarHilos numero1=new TrabajarHilos("N"+contador) {
+
+            //    @Override
+             //   public void run() {
+              //      int i = 0;
+              //      while (lo.MostrarNodo()!=null& i!=recursivity){
+         
+              //       String red =  lo.MostrarNodo();
+              ////   lo.SacarNodo();
+               //      Leer1.Lecturaweb(red,lo,listaurl);
+                //    i=i+1;
+            
+       // }
+       
+        //            try {
+          //              t.wait();
+          //          } catch (InterruptedException ex) {
+           //             Logger.getLogger(Lecturaxml.class.getName()).log(Level.SEVERE, null, ex);
+           //         }
+           
+            //   }
+                
+           /// };
+           // contador=contador+1;
          
             
-        }
+      //  }
             
             
         

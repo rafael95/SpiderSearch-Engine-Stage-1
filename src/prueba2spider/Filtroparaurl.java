@@ -29,7 +29,7 @@ public class Filtroparaurl extends Metodos{
     }
    
     public void Filtroparaurl (String texto,String red,Metodos lo,ListaCD listaurl) {
-        Metodos lo1=lo;
+       
         Pattern patterntex = Pattern.compile("/[/a-zA-ZóíñÑ0-9%$><@!*#()||{}|\\&.,=?/:;'_-]+");
         Matcher matchertex = patterntex.matcher(red+"/");
       
@@ -76,7 +76,7 @@ public class Filtroparaurl extends Metodos{
         Matcher m = p.matcher(texto6);
         while (m.find()) {
        
-          lo1.InsertarNodo(m.group(),0);
+          lo.InsertarNodo(m.group(),0);
             
         }
         
