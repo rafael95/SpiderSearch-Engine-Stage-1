@@ -60,7 +60,7 @@ public class Lecturaweb {
          e.printStackTrace();
       }
         
-         Filtroparaurl text1= new Filtroparaurl(null,null,0);
+         Filtroparaurl text1= new Filtroparaurl();
          text1.Filtroparaurl(texto,urlweb,lo,listaurl);
            Filtroparatexto text2= new Filtroparatexto();
          text2.Filtroparatexto(texto);

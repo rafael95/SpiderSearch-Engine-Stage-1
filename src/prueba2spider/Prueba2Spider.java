@@ -17,7 +17,7 @@ public class Prueba2Spider {
         // TODO code application logic here
         
          Metodos lo=new Metodos(null,null,0);
-         Lecturaxmlparaurls hola = new Lecturaxmlparaurls(null,null,0);
+         Lecturaxmlparaurls hola = new Lecturaxmlparaurls();
          hola.Lecturaxmlparaurls("archivos_a_procesar.xml",lo,null,null);
          Lecturaxml Leer = new Lecturaxml();
          ListaCD listaurl=new ListaCD(null,null,null);

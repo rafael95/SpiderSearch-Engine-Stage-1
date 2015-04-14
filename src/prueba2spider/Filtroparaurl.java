@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
  *Clase que obtiene las urls de la pagina web
  * @author rafael
  */
-public class Filtroparaurl extends Metodos{
+public class Filtroparaurl {
    
     private String texto, texto1 = "", texto2 = "", texto3 = "", texto7 = "", texto4 = "", texto5 = "", texto6 = "",red1="";
     
@@ -23,10 +23,7 @@ public class Filtroparaurl extends Metodos{
  * @param x
  */
 
-    public Filtroparaurl(String x,Nodo_para_cola enlace,int posicion1){
-        super(x,enlace,posicion1);
-       
-    }
+    
    
     public void Filtroparaurl (String texto,String red,Metodos lo,ListaCD listaurl) {
        

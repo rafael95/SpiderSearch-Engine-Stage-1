@@ -16,7 +16,7 @@ import org.jdom2.input.SAXBuilder;
  *Clase para leer la informacion de los urls de un archivo xml
  * @author rafael
  */
-public class Lecturaxmlparaurls extends Metodos {
+public class Lecturaxmlparaurls  {
 
     String xmlFile;
     
@@ -25,10 +25,7 @@ public class Lecturaxmlparaurls extends Metodos {
  * @author rafael
  */
 
-    public Lecturaxmlparaurls(String x, Nodo_para_cola enlace,int posicion1) {
-        super(x=null, enlace=null,posicion1=0);
-    }
-    
+   
     public void Lecturaxmlparaurls(String xmlFile, Metodos lo,String x,Nodo_para_cola enlace) {
       
        
