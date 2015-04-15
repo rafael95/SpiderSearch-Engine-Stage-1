@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 
 /**
  *Clase que obtiene las urls de la pagina web
- * @author rafael
+ * @author rafael, anderson
  */
 public class Filtroparaurl {
    
@@ -18,9 +18,12 @@ public class Filtroparaurl {
     
     /**
  *Metodo que obtiene las urls de la pagina web
- * @author rafael
- * @param enlace
- * @param x
+ * @author rafael, anderson
+* * @param texto
+* * @param red
+* * @param lo
+* * @param listaurl
+* 
  */
 
     
@@ -72,12 +75,18 @@ public class Filtroparaurl {
         Pattern p = Pattern.compile("[a-zA-ZóíñÑ0-9%$><@!*#()||{}|\\&.,=?/:;'_-]{35,}+");
         Matcher m = p.matcher(texto6);
         while (m.find()) {
-       
+       //synchronized(lo){
           lo.InsertarNodo(m.group(),0);
-            
+          //lo.notifyAll();
+       //}
         }
         
-       
+          /**
+ *Metodo que obtiene las urls de la pagina web
+ * @author rafael, anderson
+ se inseta la url en la lista
+ */
+
         listaurl.insertHead(red);
        
     }

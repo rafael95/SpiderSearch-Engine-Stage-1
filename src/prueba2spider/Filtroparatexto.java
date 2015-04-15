@@ -10,15 +10,16 @@ import java.util.regex.Pattern;
 
 /**
  *Clase para obtener palabras de un texto
- * @author rafael
+ * @author rafael, anderson
+ * * @param filtro1
  */
 public class Filtroparatexto {
 
     private String filtro1;
     /**
  *Metodo para obtener palabras de un texto
- * @author rafael
- *  @param texto 
+ * @author rafael, anderson
+ *  @param texto
  */
     
     public void Filtroparatexto(String texto) {

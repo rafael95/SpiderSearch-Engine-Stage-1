@@ -14,7 +14,7 @@ import org.jdom2.input.SAXBuilder;
 
 /**
  *Clase para leer la informacion de los urls de un archivo xml
- * @author rafael
+ * @author rafael, anderson
  */
 public class Lecturaxmlparaurls  {
 
@@ -22,7 +22,11 @@ public class Lecturaxmlparaurls  {
     
  /**
  *Metodo para leer la informacion de los urls de un archivo xml
- * @author rafael
+ * @author rafael,anderson
+ * *@param xmlFile
+ * *@param lo
+ * *@param x
+ * *@param enlace
  */
 
    

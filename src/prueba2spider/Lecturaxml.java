@@ -15,8 +15,12 @@ import org.jdom2.JDOMException;
 import org.jdom2.input.SAXBuilder;
 
 /**
- *
- * @author rafael
+ *Lee los parametros del xml para poder inicializar las listas
+ * @author rafael, anderson
+ * *@param xmlFile
+ * *@param lo
+ * *@param Listaurl
+ * *@param Leer1
  */
 public class Lecturaxml {
 
@@ -46,47 +50,53 @@ public class Lecturaxml {
            maxthreads= Integer.parseInt(configuracion[0]);
            recursivity=Integer.parseInt(configuracion[1]);
            reindex=Integer.parseInt(configuracion[2]);
-          // while(contador<=maxthreads){
-           // TrabajarHilos numero1=new TrabajarHilos("N"+contador) {
-
-            //    @Override
-             //   public void run() {
-              //      int i = 0;
-              //      while (lo.MostrarNodo()!=null& i!=recursivity){
+         //  int rodas=0;
+          
+         // while(rodas<=maxthreads){
+          // TrabajarHilos numeppp1=new TrabajarHilos("N"+rodas) {
+             //  @Override
+               
+             //   public  void run() {
+                     
+                   
+             ///     int i = 0;
+             //      while (i< recursivity){
+             //          synchronized(lo){
+            //              if(lo.MostrarNodo()==null){
+             //             }
+             //                 try {
+             //                     lo.wait();
+            //                  } catch (InterruptedException ex) {
+            //                      Logger.getLogger(Lecturaxml.class.getName()).log(Level.SEVERE, null, ex);
+            //                  }
+            //              }
+          //            
+          //           String red =  lo.MostrarNodo();
+          //      lo.SacarNodo();
+          //       Leer1.Lecturaweb(red,lo,listaurl);
+          //         i=i+1;
+           //        }
+                   
+                   
+          //      }
+             
+          
          
-              //       String red =  lo.MostrarNodo();
-              ////   lo.SacarNodo();
-               //      Leer1.Lecturaweb(red,lo,listaurl);
-                //    i=i+1;
             
-       // }
-       
-        //            try {
-          //              t.wait();
-          //          } catch (InterruptedException ex) {
-           //             Logger.getLogger(Lecturaxml.class.getName()).log(Level.SEVERE, null, ex);
-           //         }
-           
-            //   }
+         //  };rodas=rodas+1;  
+                   
                 
-           /// };
-           // contador=contador+1;
-         
-            
+           
+                   
+                  
       //  }
-            
-            
         
-        
-        } catch (IOException io) {
+        } catch (IOException | JDOMException io) {
             System.out.println("hola");
             System.out.println(io.getMessage());
-        } catch (JDOMException jdomex) {
-            System.out.println("hola");
-            System.out.println(jdomex.getMessage());
         }
         
         
-         
+        }  
     }
-}
+

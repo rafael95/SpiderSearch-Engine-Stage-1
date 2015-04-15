@@ -6,24 +6,25 @@
 package prueba2spider;
 
 /**
- *Clase que se utiliza para crear hilo
- * @author rafael
+ *Clase para inicializar los hilos
+ * @author rafael, anderson
  */
 public abstract class TrabajarHilos implements Runnable {
 
     Thread t;
     String nombre;
-    /**
- *Metodo que se utiliza para crear hilo
- * @author rafael
- */
+    
     public TrabajarHilos (){
         
         t= new Thread(this,"hilo1");
         t.start();
        
     }
-  
+    /**
+ *Metodo que iniciliza el thread
+ * @author rafael, anderson
+ * *@param nombre
+ */
     public TrabajarHilos (String nombre){
         this.nombre=nombre;
         t= new Thread(this,"hilo1");
@@ -31,10 +32,9 @@ public abstract class TrabajarHilos implements Runnable {
        
     }
     
-   /**
- *Metodo que corre el hilo 
- * @author rafael
- */
-   
     
+   
+            
+            
+       
 }

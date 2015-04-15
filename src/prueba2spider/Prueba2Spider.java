@@ -24,21 +24,22 @@ public class Prueba2Spider {
          Lecturaweb Leer1 = new Lecturaweb();
          Leer.Lecturaxml("configu.xml",lo, listaurl,Leer1);
         int i = 0;
+        
        
        
         
      
-       while (lo.MostrarNodo()!=null& i!=15){
+      while (lo.MostrarNodo()!=null& i!=15){
          
         String red =  lo.MostrarNodo();
         lo.SacarNodo();
         Leer1.Lecturaweb(red,lo,listaurl);
-        i=i+1;
+       i=i+1;
             
         }
          lo.MostrarNodo();
          lo.ImprimirNodo();
-        listaurl.mostrar();
+         listaurl.mostrar();
            
         
            

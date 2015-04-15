@@ -1,7 +1,9 @@
 package prueba2spider;
 /**
- *
- * @author anderson
+ *Clase en  la que se utiliza la lista circular dble
+ * @author anderson, anderson
+ *  * @param tail
+ *  * @param head
  */
 public class ListaCD  extends NodoCD{
     NodoCD head;
@@ -13,7 +15,11 @@ public class ListaCD  extends NodoCD{
         Dato=null;
        
     }
-   
+   /**
+ *inserta el dato en el inicio de la lista circular doble
+ * @author anderson, anderson
+ * *@param Dato
+ */
     public void insertHead(String Dato){
         
        NodoCD nuevo=new NodoCD(Dato,null,null);
@@ -34,6 +40,11 @@ public class ListaCD  extends NodoCD{
             head.Prev=tail;
         }
     }
+    /**
+ *Busca el dato dado y envia un string si el dato es encontrado o no 
+ * @author anderson, anderson
+ * *@param Dato
+ */
     public void buscarNodo(String Dato){
         NodoCD actual=new NodoCD(Dato,null,null);
         actual=tail;
@@ -50,6 +61,10 @@ public class ListaCD  extends NodoCD{
             System.out.println("Nodo no encontrado");
         }
     }
+    /**
+ *Muestra el contenido de la lista doble enlazada
+ * @author anderson, anderson
+ */
     public void mostrar(){
         NodoCD actual=new NodoCD(null,null,null);
         actual=head;

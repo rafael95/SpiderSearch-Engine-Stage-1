@@ -1,8 +1,11 @@
 package prueba2spider;
 
 /**
- *
- * @author anderson
+ *clase en la se colocan el tipo de dato que se encuenta en el nodo
+ * @author anderson,rafael
+ * *@param Dato
+ * *@param Next
+ * *@param Prev
  */
 public class NodoCD {
    String Dato;

@@ -5,7 +5,7 @@
 package prueba2spider;
 /**
  *Clase Para modificar la cola 
- * @author rafael
+ * @author rafael, anderson
  */
 
 public class Metodos extends Nodo_para_cola{
@@ -23,7 +23,9 @@ public class Metodos extends Nodo_para_cola{
 
     /**
  *Clase Para modificar la cola 
- * @author rafael
+ * @author rafael, anderson
+ * *@param x
+ * *@param posicion1
  */
     void InsertarNodo(String x,int posicion1){
         Nodo_para_cola nuevo;
@@ -39,14 +41,14 @@ public class Metodos extends Nodo_para_cola{
     }
     /**
  *Metodo que elimina el primer valor de la cola
- * @author rafael
+ * @author rafael, anderson
  */
     void SacarNodo(){
         frente=frente.sig;
     }
     /**
  *Metodo que muestra el primer valor de la cola
- * @author rafael
+ * @author rafael, anderson
  */
      String  MostrarNodo(){
            if(frente==null){
@@ -66,7 +68,7 @@ public class Metodos extends Nodo_para_cola{
  *Metodo que imprime la cola
  * @author rafael     /**
  *Metodo que imprime la cola
- * @author rafael
+ * @author rafael, anderson
  */
     
     void ImprimirNodo(){

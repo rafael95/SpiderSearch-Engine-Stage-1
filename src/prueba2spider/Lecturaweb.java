@@ -16,7 +16,7 @@ import java.net.URLConnection;
 
 /**
  *Clase que realiza la conexion para obtener la informacion de la pagina web
- * @author rafael
+ * @author rafael, anderson
  */
 
 public class Lecturaweb {
@@ -24,7 +24,10 @@ public class Lecturaweb {
        private String texto;
  /**
  *Metodo que realiza la conexion para obtener la informacion de la pagina web
- * @author rafael
+ * @author rafael, anderson
+ * * @param urlweb
+ * * @param lo
+ * * @param listaurl
  */
     
     public void Lecturaweb(String urlweb,Metodos lo,ListaCD listaurl) {
