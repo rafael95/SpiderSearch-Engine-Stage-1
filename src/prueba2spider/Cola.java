@@ -8,13 +8,13 @@ package prueba2spider;
  * @author rafael, anderson
  */
 
-public class Metodos extends Nodo_para_cola{
+public class Cola extends Nodo_para_cola{
     Nodo_para_cola sig, frente,ultimo;
     
   
     private  String dato;
     private  int pos;
-    Metodos(String x,Nodo_para_cola enlace,int posicion1){
+    Cola(String x,Nodo_para_cola enlace,int posicion1){
         super( x,enlace,posicion1);
         frente=ultimo=null;
         dato="";

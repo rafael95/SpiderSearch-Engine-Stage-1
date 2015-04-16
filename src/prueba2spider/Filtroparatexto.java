@@ -22,7 +22,7 @@ public class Filtroparatexto {
  *  @param texto
  */
     
-    public void Filtroparatexto(String texto) {
+    public void Filtroparatexto(String texto,ListaDE listadoble) {
 
         Pattern pattern = Pattern.compile(">(.*?)<");
         Matcher matcher = pattern.matcher(texto);
@@ -34,8 +34,8 @@ public class Filtroparatexto {
         Matcher m = p.matcher(filtro1);
         while (m.find()) {
             
-            
-          //  System.out.println(m.group());
+          listadoble.insertHead(m.group());
+           
         }
 
     }

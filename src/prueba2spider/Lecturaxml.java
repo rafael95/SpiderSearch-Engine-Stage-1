@@ -28,7 +28,7 @@ public class Lecturaxml {
     int maxthreads=0,recursivity=0,reindex=0,contador=1;
     
 
-    public void Lecturaxml(String xmlFile,Metodos lo,ListaCD listaurl, Lecturaweb Leer1) {
+    public void Lecturaxml(String xmlFile,Cola lo,ListaCD listaurl, Lecturaweb Leer1,ListaDE listadoble) {
 
         SAXBuilder builder = new SAXBuilder();
 

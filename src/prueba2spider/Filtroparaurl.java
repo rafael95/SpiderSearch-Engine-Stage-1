@@ -28,7 +28,7 @@ public class Filtroparaurl {
 
     
    
-    public void Filtroparaurl (String texto,String red,Metodos lo,ListaCD listaurl) {
+    public void Filtroparaurl (String texto,String red,Cola lo,ListaCD listaurl) {
        
         Pattern patterntex = Pattern.compile("/[/a-zA-ZóíñÑ0-9%$><@!*#()||{}|\\&.,=?/:;'_-]+");
         Matcher matchertex = patterntex.matcher(red+"/");
