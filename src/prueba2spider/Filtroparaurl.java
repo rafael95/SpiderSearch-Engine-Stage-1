@@ -28,7 +28,7 @@ public class Filtroparaurl {
 
     
    
-    public void Filtroparaurl (String texto,String red,Cola lo,ListaCD listaurl) {
+    public void Filtroparaurl (String texto,String red,Cola lo,ListaCD listaurl,int a) {
        
         Pattern patterntex = Pattern.compile("/[/a-zA-ZóíñÑ0-9%$><@!*#()||{}|\\&.,=?/:;'_-]+");
         Matcher matchertex = patterntex.matcher(red+"/");
@@ -76,7 +76,8 @@ public class Filtroparaurl {
         Matcher m = p.matcher(texto6);
         while (m.find()) {
        //synchronized(lo){
-          lo.InsertarNodo(m.group(),0);
+          lo.InsertarNodo(m.group(),a+1);
+        
           //lo.notifyAll();
        //}
         }

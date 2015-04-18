@@ -51,10 +51,11 @@ public class Cola extends Nodo_para_cola{
  * @author rafael, anderson
  */
      String  MostrarNodo(){
-           if(frente==null){
+            Nodo_para_cola aux=frente;
+           if(aux==null){
             return null;
            }
-          Nodo_para_cola aux=frente;
+       
           
          return (aux.dato);
     }
@@ -62,6 +63,9 @@ public class Cola extends Nodo_para_cola{
      
       int  Mostrarasociado(){
           Nodo_para_cola aux=frente;
+          if(aux==null){
+              return 100;
+          }
          return (aux.posicion);
     }
      /**
@@ -71,13 +75,16 @@ public class Cola extends Nodo_para_cola{
  * @author rafael, anderson
  */
     
-    void ImprimirNodo(){
+    String ImprimirNodo(){
         Nodo_para_cola aux=frente;
         String salir="";
+        if (aux==null){
+            return null;
+        }
         while(aux!=null){
-            salir+=aux.dato+aux.posicion+",";
+            salir+=aux.dato+""+(aux.posicion)+",";
             aux=aux.sig;
         }
-        System.out.println("Nodos :"+salir);
+        return("Nodos :"+salir);
     }
 }

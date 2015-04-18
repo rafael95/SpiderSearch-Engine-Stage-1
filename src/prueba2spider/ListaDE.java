@@ -70,15 +70,22 @@ public class ListaDE  extends NodoDE{
         }
  
    }
- public void mostrardesdeHead(){
+ public String mostrardesdeHead(){
         NodoDE actual=new NodoDE();
         actual=head;
-        
-        do{
-            System.out.println(actual.Dato);
-            actual=actual.Next;
+        String respuesta="";
+        if(actual==null){
+            return null;
         }
+        do{
+            respuesta= respuesta+actual.Dato;
+            actual=actual.Next;
+           
+            
+        }
+      
         while(actual!=null);
+           return(respuesta);
     }
 
 public void mostrardesdeTail(){

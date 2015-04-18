@@ -50,10 +50,10 @@ public class Lecturaxmlparaurls  {
             }
           
         } catch (IOException io) {
-            System.out.println("hola");
+         
             System.out.println(io.getMessage());
         } catch (JDOMException jdomex) {
-            System.out.println("hola");
+            ;
             System.out.println(jdomex.getMessage());
         }
      

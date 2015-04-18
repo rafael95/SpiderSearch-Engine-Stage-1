@@ -7,15 +7,16 @@ package prueba2spider;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CyclicBarrier;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
 import org.jdom2.input.SAXBuilder;
 
 /**
- *Lee los parametros del xml para poder inicializar las listas
+ * Lee los parametros del xml para poder inicializar las listas
+ *
  * @author rafael, anderson
  * *@param xmlFile
  * *@param lo
@@ -23,80 +24,90 @@ import org.jdom2.input.SAXBuilder;
  * *@param Leer1
  */
 public class Lecturaxml {
-
+int a=0;
     String xmlFile;
-    int maxthreads=0,recursivity=0,reindex=0,contador=1;
-    
+    int maxthreads = 0, recursivity = 0, reindex = 0, contador = 1;
 
-    public void Lecturaxml(String xmlFile,Cola lo,ListaCD listaurl, Lecturaweb Leer1,ListaDE listadoble) {
+    public void Lecturaxml(String xmlFile, Cola lo, ListaCD listaurl, Lecturaweb Leer1, ListaDE listadoble) throws JDOMException, IOException {
 
         SAXBuilder builder = new SAXBuilder();
 
+        Document document = (Document) builder.build(xmlFile);
+        Element rootNode = document.getRootElement();
+        List list = rootNode.getChildren();
+        String configuracion[] = new String[3];
+
+        for (int e = 0; e < list.size(); e++) {
+
+            Element node = (Element) list.get(e);
+
+            String configuracio = node.getValue();
+            configuracion[e] = configuracio;
+
+        }
+        a=lo.Mostrarasociado();
+         lo.MostrarNodo();
+                            String red = lo.MostrarNodo();
+                            lo.SacarNodo();
+                            Leer1.Lecturaweb(red, lo, listaurl, listadoble,a);
+        maxthreads = Integer.parseInt(configuracion[0]);
+        recursivity = Integer.parseInt(configuracion[1]);
+        reindex = Integer.parseInt(configuracion[2]);
+        lo.MostrarNodo();
+        final CyclicBarrier barreraInicio = new CyclicBarrier(20+1);
+        final CyclicBarrier barreraFin = new CyclicBarrier(20+1);
+
+        for (int i = 0; i <20; i++) {
+            Thread hilo = new Thread("h"+i){
+                @Override
+                public  void run() {
+  
+                    try {
+                         barreraInicio.await();
+                        while(lo.Mostrarasociado() <=2 ) {
+                       // barreraInicio.await();
+                           synchronized(lo){
+                            
+                         
+                      
+                            System.out.println(lo.MostrarNodo());
+                            
+                      if  (lo.MostrarNodo()!=null){
+                              System.out.println(this.getName()+lo.Mostrarasociado());
+                            a=lo.Mostrarasociado();
+                            lo.MostrarNodo();
+                            String red = lo.MostrarNodo();
+                            lo.SacarNodo();
+                            Leer1.Lecturaweb(red, lo, listaurl, listadoble,a);
+                            
+                            }
+                        
+                          
+                            
+                           }
+
+                        barreraFin.await();
+                    }
+                    } catch (InterruptedException | BrokenBarrierException e) {
+                    }
+                }
+            };
+            hilo.start();
+       
+        }
+
         try {
 
-            Document document = (Document) builder.build(xmlFile);
-            Element rootNode = document.getRootElement();
-            List list = rootNode.getChildren();
-            String configuracion[]=new String[3];
+            barreraInicio.await();
+            barreraFin.await();
 
-            for (int i = 0; i < list.size(); i++) {
-
-                Element node = (Element) list.get(i);
-
-                String configuracio= node.getValue();
-                configuracion[i]=configuracio;
-
-            }
-           maxthreads= Integer.parseInt(configuracion[0]);
-           recursivity=Integer.parseInt(configuracion[1]);
-           reindex=Integer.parseInt(configuracion[2]);
-         //  int rodas=0;
-          
-         // while(rodas<=maxthreads){
-          // TrabajarHilos numeppp1=new TrabajarHilos("N"+rodas) {
-             //  @Override
-               
-             //   public  void run() {
-                     
-                   
-             ///     int i = 0;
-             //      while (i< recursivity){
-             //          synchronized(lo){
-            //              if(lo.MostrarNodo()==null){
-             //             }
-             //                 try {
-             //                     lo.wait();
-            //                  } catch (InterruptedException ex) {
-            //                      Logger.getLogger(Lecturaxml.class.getName()).log(Level.SEVERE, null, ex);
-            //                  }
-            //              }
-          //            
-          //           String red =  lo.MostrarNodo();
-          //      lo.SacarNodo();
-          //       Leer1.Lecturaweb(red,lo,listaurl);
-          //         i=i+1;
-           //        }
-                   
-                   
-          //      }
-             
-          
-         
-            
-         //  };rodas=rodas+1;  
-                   
-                
-           
-                   
-                  
-      //  }
-        
-        } catch (IOException | JDOMException io) {
-            System.out.println("hola");
-            System.out.println(io.getMessage());
+        } catch (InterruptedException | BrokenBarrierException e) {
         }
-        
-        
-        }  
-    }
 
+        System.out.println(lo.ImprimirNodo());
+        
+        System.out.println(listaurl.mostrar());
+        System.out.println(listadoble.mostrardesdeHead());
+
+    }
+}

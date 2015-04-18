@@ -30,7 +30,7 @@ public class Lecturaweb {
  * * @param listaurl
  */
     
-    public void Lecturaweb(String urlweb,Cola lo,ListaCD listaurl,ListaDE listadoble) {
+    public void Lecturaweb(String urlweb,Cola lo,ListaCD listaurl,ListaDE listadoble,int a) {
         
         try {
          // Se abre la conexión
@@ -64,7 +64,7 @@ public class Lecturaweb {
       }
         
          Filtroparaurl text1= new Filtroparaurl();
-         text1.Filtroparaurl(texto,urlweb,lo,listaurl);
+         text1.Filtroparaurl(texto,urlweb,lo,listaurl,a);
            Filtroparatexto text2= new Filtroparatexto();
          text2.Filtroparatexto(texto,listadoble);
      

@@ -44,10 +44,23 @@ public class ListaCD  extends NodoCD{
  *Busca el dato dado y envia un string si el dato es encontrado o no 
  * @author anderson, anderson
  * *@param Dato
- */
-    public void buscarNodo(String Dato){
+ * 
+ */ String  MostrarNodo(){
+     NodoCD actual=new NodoCD(null,null,null);
+           if(head==null){
+            return null;
+           }
+         
+          
+         return (actual.Dato);
+    }
+    public int buscarNodo(String Dato){
         NodoCD actual=new NodoCD(Dato,null,null);
         actual=tail;
+        if(MostrarNodo()==null){
+            return 0;
+            
+        }
         boolean encontrado=false;
         do{
             if(actual.Dato==Dato){
@@ -56,22 +69,25 @@ public class ListaCD  extends NodoCD{
             actual=actual.Prev;
         }while(actual!=tail);
         if(encontrado==true){
-            System.out.println("Nodo encontrado");
+           return 1;
         }else{
-            System.out.println("Nodo no encontrado");
+            return -1;
         }
     }
     /**
  *Muestra el contenido de la lista doble enlazada
  * @author anderson, anderson
  */
-    public void mostrar(){
+    public String mostrar(){
         NodoCD actual=new NodoCD(null,null,null);
         actual=head;
+        String respuesta="";
         do{
-            System.out.println(actual.Dato);
+            respuesta=respuesta+actual.Dato;
             actual=actual.Next;
         }
+        
         while(actual!=head);
+        return respuesta;
     }
 }
