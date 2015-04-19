@@ -57,17 +57,16 @@ public class ListaCD  extends NodoCD{
     public int buscarNodo(String Dato){
         NodoCD actual=new NodoCD(Dato,null,null);
         actual=tail;
-        if(MostrarNodo()==null){
-            return 0;
-            
-        }
+        
         boolean encontrado=false;
         do{
-            if(actual.Dato==Dato){
+            if(actual.Dato==(Dato)){
                 encontrado=true;
+                
             }
             actual=actual.Prev;
         }while(actual!=tail);
+        
         if(encontrado==true){
            return 1;
         }else{

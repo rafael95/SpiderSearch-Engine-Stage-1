@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+
 
  <targets>
      <URL>es.wikipedia.org</URL>
-     
+     <URL>www.google.es</URL>
+     <URL>www.nacion.com</URL>
+     <URL>es.wikipedia.org</URL>
  </targets>
 
 
