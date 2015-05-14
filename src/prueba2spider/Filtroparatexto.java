@@ -29,7 +29,7 @@ public class Filtroparatexto {
         while (matcher.find()) {
             filtro1 = filtro1 + matcher.group();
         }
-
+        
         Pattern p = Pattern.compile(" [a-zA-ZóíñÑ]{4,30}+");
         Matcher m = p.matcher(filtro1);
         while (m.find()) {

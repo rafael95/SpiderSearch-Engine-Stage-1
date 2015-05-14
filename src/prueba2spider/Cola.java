@@ -9,11 +9,13 @@ package prueba2spider;
  */
 
 public class Cola extends Nodo_para_cola{
-    Nodo_para_cola sig, frente,ultimo;
+    Nodo_para_cola 
+            sig, frente,ultimo;
     
   
     private  String dato;
     private  int pos;
+    
     Cola(String x,Nodo_para_cola enlace,int posicion1){
         super( x,enlace,posicion1);
         frente=ultimo=null;

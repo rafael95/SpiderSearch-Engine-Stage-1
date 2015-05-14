@@ -16,15 +16,15 @@ public class Prueba2Spider {
     
     public static void main(String[] args) throws IOException, JDOMException{
         // TODO code application logic here
-        
-         Cola lo=new Cola(null,null,0);
-         Lecturaxmlparaurls hola = new Lecturaxmlparaurls();
-         hola.Lecturaxmlparaurls("archivos_a_procesar.xml",lo,null,null);
-         Lecturaxml Leer = new Lecturaxml() ;
-         ListaCD listaurl=new ListaCD(null,null,null);
-         Lecturaweb Leer1 = new Lecturaweb();
-         ListaDE listadoble=new ListaDE();
-         Leer.Lecturaxml("configu.xml",lo, listaurl,Leer1, listadoble);
+       
+        Cola lo=new Cola(null,null,0);
+        Lecturaxmlparaurls hola = new Lecturaxmlparaurls();
+        hola.Lecturaxmlparaurls("archivos_a_procesar.xml",lo,null,null);
+        Lecturaxml Leer = new Lecturaxml() ;
+        ListaCD listaurl=new ListaCD(null,null,null);
+        Lecturaweb Leer1 = new Lecturaweb();
+        ListaDE listadoble=new ListaDE();
+        Leer.Lecturaxml("configu.xml",lo, listaurl,Leer1, listadoble);
      //   int i = 0;
         
        

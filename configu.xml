@@ -3,6 +3,6 @@
 
  <spider>
      <maxthreads>20</maxthreads>
-     <recursivity>10</recursivity>
+     <recursivity>1</recursivity>
      <reindex>5600</reindex>
  </spider>

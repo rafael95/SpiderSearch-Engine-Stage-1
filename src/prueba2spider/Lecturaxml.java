@@ -13,6 +13,7 @@ import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
 import org.jdom2.input.SAXBuilder;
+import static prueba2spider.IConstantes.REGEX_HIPER_PATTER;
 
 /**
  * Lee los parametros del xml para poder inicializar las listas
@@ -26,13 +27,13 @@ import org.jdom2.input.SAXBuilder;
 public class Lecturaxml {
 
     int a = 0;
-    String xmlFile;
+    String xmlFile,p;
     int maxthreads = 0, recursivity = 0, reindex = 0, contador = 1;
 
     public void Lecturaxml(String xmlFile, Cola lo, ListaCD listaurl, Lecturaweb Leer1, ListaDE listadoble) throws JDOMException, IOException {
 
         SAXBuilder builder = new SAXBuilder();
-
+p=REGEX_HIPER_PATTER;
         Document document = (Document) builder.build(xmlFile);
         Element rootNode = document.getRootElement();
         List list = rootNode.getChildren();
